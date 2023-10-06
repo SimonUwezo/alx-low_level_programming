@@ -9,7 +9,7 @@
  * Return : always 0
  */
 
-int main(void)
+int main(void) - main void int
 {
 int n;
 int m;
