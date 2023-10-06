@@ -1,34 +1,23 @@
 #include <stdio.h>
 /**
- * main - main function
- *
- * Return: always 0(success)
- */
+* main - main function
+*
+* Return: always 0(success)
+*/
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-	{
-		while (i <='9')
-			while (j <= 9)
-			{
-				if (!(i > j) || i == j)
-					putchar (i);
-				putchar(j);
-				if (i == '8' && j == '9')
-				{
-					putchar('\n');
-					else
-					{
-						putchar(',');
-						putchar(' ');
-						j++;
-						j='0'
-							i++
-							i='0'
-							return (0)
-					}
-				}
-			}
-	}
+int i;
+int j;
+{
+for (j = 0; j < 9; i++)
+for (j = i + 1; j < 10; j++)
+putchar((i % 10) + '0');
+putchar((j % 10) + '0');
+if (i == 8 && j == 9)
+continue;
+putchar(',');
+putchar(' ');
+}
+putchar('\n');
+return (0);
 }
