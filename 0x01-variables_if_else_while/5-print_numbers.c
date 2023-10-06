@@ -1,10 +1,9 @@
 #include <stdio.h>
-
 /**
- * main -The main function
- *
- * Return; Always 0(success)
- */
+* main - main function
+*
+* Return; Always 0(success)
+*/
 int main(void)
 {
 int i;
