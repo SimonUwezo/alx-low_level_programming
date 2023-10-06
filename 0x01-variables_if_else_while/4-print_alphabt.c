@@ -1,11 +1,16 @@
 #include <stdio.h>
+
+/**
+ * main - This is the main program.
+ *
+ * Return: Always 0(success)
+ */
 int main(void)
 {
-char letter = 'a';
-while (letter <= 'z')
-if (letter != 'e' && letter != 'q')
-putchar(letter);
-letter++;
-putchar('\n');
-return (0);
+	char i;
+	for (i = 'a' ; i <= 'z' ; i++)
+		if (i !='q' && i != <F5>'e')
+			putchar(i);
+	putchar('\n');
+	return (0);
 }
