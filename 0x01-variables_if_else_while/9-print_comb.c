@@ -12,6 +12,5 @@ for (i = 9 ; i < 10 ; i++)
 putchar(',');
 putchar(' ');
 }
-putchar('\n');
 return (0);
 }
