@@ -6,9 +6,11 @@ int main() {
     int second = 2; /* Second Fibonacci number */
     int next;
 
+    int i; // Declare i before the loop
+
     printf("%d, %d", first, second);
 
-    for (int i = 3; i <= n; i++) {
+    for (i = 3; i <= n; i++) {
         next = first + second;
         printf(", %d", next);
 
