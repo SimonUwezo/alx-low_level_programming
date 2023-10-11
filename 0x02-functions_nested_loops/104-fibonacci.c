@@ -6,7 +6,7 @@ int main() {
     int second = 2; /* Second Fibonacci number */
     int next;
 
-    int i; // Declare i before the loop
+    int i; /* Declare i before the loop */
 
     printf("%d, %d", first, second);
 
