@@ -1,23 +1,23 @@
 #include <stdio.h>
 
-int main() {
-    int n = 50;  // Number of Fibonacci numbers to print
-    unsigned long long int a = 1, b = 2, temp;
-
-    if (n >= 1) {
-        printf("%llu", a);
-    }
-    if (n >= 2) {
-        printf(", %llu", b);
-    }
-
-    for (int i = 3; i <= n; i++) {
-        temp = a + b;
-        printf(", %llu", temp);
-        a = b;
-        b = temp;
-    }
-
-    printf("\n");
-    return 0;
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+long int prev = 1, current = 2, next, sum;
+int count;
+printf("%ld, %ld", prev, current);
+for (count = 3; count <= 50; count++)
+{
+next = prev + current;
+sum += next;
+printf(", %ld", next);
+prev = current;
+current = next;
+}
+printf("\n");
+return (0);
 }
