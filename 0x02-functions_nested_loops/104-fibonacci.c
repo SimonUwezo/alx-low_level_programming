@@ -2,17 +2,15 @@
 
 int main() {
     int n = 98; /* The number of Fibonacci numbers to print */
-    int first = 1; /* First Fibonacci number */
-    int second = 2; /* Second Fibonacci number */
-    int next;
+    unsigned long long first = 1; /* First Fibonacci number */
+    unsigned long long second = 2; /* Second Fibonacci number */
+    unsigned long long next;
 
-    int i; /* Declare i before the loop */
+    printf("%llu, %llu", first, second);
 
-    printf("%d, %d", first, second);
-
-    for (i = 3; i <= n; i++) {
+    for (int i = 3; i <= n; i++) {
         next = first + second;
-        printf(", %d", next);
+        printf(", %llu", next);
 
         /* Shift the variables for the next iteration */
         first = second;
