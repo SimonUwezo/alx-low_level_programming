@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* Main - Entry point
+* main - entry point
 *
 * Description:prints the numbers 1 - 100 w/
-* fizz for multiples of 3, Buzz for multiples of 5,
-* and fizzBuzz for multiples of both
+* Fizz for multiples of 3, Buzz for multiples of 5,
+* and FizzBuzz for multiples of both
 *
-* Return: Always 0
+* Return:always 0
 */
 int main(void)
 {
@@ -25,6 +25,6 @@ printf("%i", i);
 if (i < 100)
 printf(" ");
 }
-printf("\n");
+printf('\n');
 return (0);
 }
