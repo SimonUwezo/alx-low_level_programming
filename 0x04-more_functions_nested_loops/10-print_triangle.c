@@ -2,12 +2,14 @@
 /**
 * print _triangle - entry point
 * Description:i prints diagonals
-* @size: size of the triangle
+*@size: size of the triangle
 * Return: void
 */
 void print_triangle(int size)
 {
-int row, hashes, spaces;
+int row;
+int hashes;
+int spaces;
 if (size <= 0)
 {
 _putchar('\n');
