@@ -8,6 +8,7 @@ void puts_half(char *str)
 int full_length = 0;
 int half_length;
 int i = 0;
+int _putchar(char c);
 while (str[full_length] != '\0')
 {
 full_length++;
