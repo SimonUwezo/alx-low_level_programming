@@ -16,7 +16,7 @@ while (dest[length_of_string] != '\0')
 {
 length_of_string++;
 }
-for (z = 0; z < n && src[z] != '\0'; z++,length_of_string++)
+for (z = 0; z < n && src[z] != '\0'; z++, length_of_string++)
 {
 dest[length_of_string] = src[z];
 }
