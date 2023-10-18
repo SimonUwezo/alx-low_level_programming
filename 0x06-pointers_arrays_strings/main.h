@@ -1,5 +1,8 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+/**
+ * This header contains all my prototypes for this project
+ */
 int _putchar.c(char c);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
