@@ -12,7 +12,7 @@ int string_count;
 string_count = 0;
 while (s[string_count] != '\0')
 {
-/* if next character after count is a char , capitalise it */
+/* if next character after count is a char, capitalise it */
 if (s[0] >= 97 && s[0] <= 122)
 {
 s[0] = s[0] - 32;
