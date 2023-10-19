@@ -13,7 +13,7 @@ while (x[length_of_string] != '\0')
 {
 if (x[length_of_string] >= 97 && x[length_of_string] <= 122)
 {
-x[length_of_string] = x[length_of_string] -32;
+x[length_of_string] = x[length_of_string] - 32;
 }
 length_of_string++;
 }
