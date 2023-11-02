@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 int find_len(char *str);
 char *create_xarray(int size);
