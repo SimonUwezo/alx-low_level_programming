@@ -5,12 +5,12 @@
 #include <unistd.h>
 
 /**
- * _strncmp - compare two strings
- * @s1: the first string
- * @s2: the second string
- * @n: the max number of bytes to compare
+ * _strncmp - Function that compares two strings.
+ * @s1: First string
+ * @s2: Second string
+ * @n: the max no of bytes.
  *
- * Return: 0 if the first n bytes of s1 and s2 are equal, otherwise non-zero
+ * Return: 0 if the first n bytes of s1 and s2 are equal.
  */
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -77,10 +77,10 @@ void elf_magic(const unsigned char *buffer)
 }
 
 /**
- * elf_class - print ELF class
+ * elf_class - prints ELF class
  * @buffer: the ELF header
  *
- * Return: bit mode (32 or 64)
+ * Return: Bit mode.
  */
 size_t elf_class(const unsigned char *buffer)
 {
@@ -101,10 +101,10 @@ size_t elf_class(const unsigned char *buffer)
 }
 
 /**
- * elf_data - print ELF data
- * @buffer: the ELF header
+ * elf_data - prints ELF data
+ * @buffer: ELF header
  *
- * Return: 1 if big endian, otherwise 0
+ * Return: 0
  */
 int elf_data(const unsigned char *buffer)
 {
@@ -125,8 +125,8 @@ int elf_data(const unsigned char *buffer)
 }
 
 /**
- * elf_version - print ELF version
- * @buffer: the ELF header
+ * elf_version - print ELF version.
+ * @buffer: ELF header
  */
 void elf_version(const unsigned char *buffer)
 {
@@ -184,9 +184,10 @@ void elf_abivers(const unsigned char *buffer)
 }
 
 /**
- * elf_type - print ELF type
- * @buffer: the ELF header
- * @big_endian: endianness (big endian if non-zero)
+ * elf_type - function that prints ELF type.
+ * @buffer: ELF header
+ * @big_endian: Endianness.
+ * Return: Always 0.
  */
 void elf_type(const unsigned char *buffer, int big_endian)
 {
@@ -217,10 +218,10 @@ void elf_type(const unsigned char *buffer, int big_endian)
 }
 
 /**
- * elf_entry - print entry point address
- * @buffer: string containing the entry point address
- * @bit_mode: bit mode (32 or 64)
- * @big_endian: endianness (big endian if non-zero)
+ * elf_entry - Entry point
+ * @buffer: Address point string.
+ * @bit_mode: Bit mode.
+ * @big_endian: Endianness
  */
 void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
 {
@@ -255,11 +256,11 @@ void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
 }
 
 /**
- * main - copy a file's contents to another file
- * @argc: the argument count
- * @argv: the argument values
+ * main - Funtion that copies a file's contents to another file.
+ * @argc: Arg count
+ * @argv: The arg
  *
- * Return: Always 0
+ * Return: 0
  */
 int main(int argc, const char *argv[])
 {
