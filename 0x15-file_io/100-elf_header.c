@@ -5,14 +5,12 @@
 #include <unistd.h>
 
 /**
- * _strncmp - A program that displays the information contained
- * in the ELF header at the start of an ELF file.
+ * _strncmp - compare two strings
+ * @s1: the first string
+ * @s2: the second string
+ * @n: the max number of bytes to compare
  *
- * @s1: First string.
- * @s2: Second string.
- * @n: Maximum no of bytes to compare.
- *
- * Return: 0 if the first n bytes of s1 and s2 are equal.
+ * Return: 0 if the first n bytes of s1 and s2 are equal, otherwise non-zero
  */
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -108,7 +106,7 @@ size_t elf_class(const unsigned char *buffer)
  *
  * Return: 1 if big endian, otherwise 0
  */
-int elf_data(unsigned char *buffer)
+int elf_data(const unsigned char *buffer)
 {
 	printf("  %-34s ", "Data:");
 
@@ -130,7 +128,7 @@ int elf_data(unsigned char *buffer)
  * elf_version - print ELF version
  * @buffer: the ELF header
  */
-void elf_version(unsigned char *buffer)
+void elf_version(const unsigned char *buffer)
 {
 	printf("  %-34s %u", "Version:", buffer[EI_VERSION]);
 
@@ -144,7 +142,7 @@ void elf_version(unsigned char *buffer)
  * elf_osabi - print ELF OS/ABI
  * @buffer: the ELF header
  */
-void elf_osabi(unsigned char *buffer)
+void elf_osabi(const unsigned char *buffer)
 {
 	const char *os_table[19] = {
 		"UNIX - System V",
@@ -180,7 +178,7 @@ void elf_osabi(unsigned char *buffer)
  * elf_abivers - print ELF ABI version
  * @buffer: the ELF header
  */
-void elf_abivers(unsigned char *buffer)
+void elf_abivers(const unsigned char *buffer)
 {
 	printf("  %-34s %u\n", "ABI Version:", buffer[EI_ABIVERSION]);
 }
@@ -190,7 +188,7 @@ void elf_abivers(unsigned char *buffer)
  * @buffer: the ELF header
  * @big_endian: endianness (big endian if non-zero)
  */
-void elf_type(unsigned char *buffer, int big_endian)
+void elf_type(const unsigned char *buffer, int big_endian)
 {
 	char *type_table[5] = {
 		"NONE (No file type)",
@@ -224,7 +222,7 @@ void elf_type(unsigned char *buffer, int big_endian)
  * @bit_mode: bit mode (32 or 64)
  * @big_endian: endianness (big endian if non-zero)
  */
-void elf_entry(unsigned char *buffer, size_t bit_mode, int big_endian)
+void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
 {
 	int address_size = bit_mode / 8;
 
@@ -263,7 +261,7 @@ void elf_entry(unsigned char *buffer, size_t bit_mode, int big_endian)
  *
  * Return: Always 0
  */
-int main(int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
 	unsigned char buffer[18];
 	unsigned int bit_mode;
@@ -301,4 +299,4 @@ int main(int argc, char *argv[])
 	_close(fd);
 
 	return (0);
-5}
+}
